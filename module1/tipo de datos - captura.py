@@ -11,5 +11,6 @@ print(variable)
 print(type(variable))
 
 # Es permitido hacer el casting the datos
-numero = float(variable)
-print(variable)
+numero = int(variable)
+print(numero)
+print(type(numero))
