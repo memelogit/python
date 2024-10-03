@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'python3 hello.py'
+                sh '/usr/bin/python3.9 hello.py'
             }
         }
         stage('Test') {
