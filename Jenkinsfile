@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'yum install python3'
+                sh 'ls -ltra'
             }
         }
         stage('Test') {
