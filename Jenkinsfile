@@ -1,10 +1,15 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'python:3.8' // O la versión que necesites
+            args '-u' // Opcional: ejecuta como usuario no root
+        }
+    }
 
     stages {
         stage('Build') {
             steps {
-                sh '/var/jenkins_home/python --version'
+                sh 'python --version'
             }
         }
         stage('Test') {
