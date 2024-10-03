@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'ls -ltra'
+                sh '/var/jenkins_home/python --version'
             }
         }
         stage('Test') {
