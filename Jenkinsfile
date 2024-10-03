@@ -1,11 +1,15 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'python:3.8'
+        }
+    }
 
     stages {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh '/usr/bin/python3.9 hello.py'
+                sh 'python hello.py'
             }
         }
         stage('Test') {
